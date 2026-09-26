@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-display {
+    font-family: 'Playfair Display', serif;
+}
+
+.coffee-gradient {
+    background: linear-gradient(135deg, #3b1f14 0%, #6f4228 50%, #b77945 100%);
+}
+
+.hero-overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(24, 12, 7, 0.9),
+        rgba(24, 12, 7, 0.55),
+        rgba(24, 12, 7, 0.15)
+    );
+}
+
+.menu-card {
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(60, 30, 15, 0.15);
+}
+
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-img {
+    transition: transform 0.4s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #92400e;
+    box-shadow: 0 0 0 3px rgba(146, 64, 14, 0.15);
+}
+
+.page-header {
+    background: linear-gradient(135deg, #3b1f14, #7c4a2d);
+}

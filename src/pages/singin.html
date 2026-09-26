@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+          <title>Café Aroma</title>
+          <link rel="icon"
+                type="image/png"
+                href="https://icons.iconarchive.com/icons/iconoir-team/iconoir/128/coffee-cup-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="../../assets/css/style.css">
+
+</head>
+
+
+<body class="bg-stone-50">
+
+
+<!-- NAVBAR -->
+
+<nav class="bg-white border-b">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="flex items-center justify-between h-20">
+
+            <a href="../../index.html"
+               class="flex items-center gap-3">
+
+                <div class="w-11 h-11 bg-coffee-900 rounded-full text-white flex items-center justify-center">
+                    ☕
+                </div>
+
+                <span class="font-display text-2xl font-bold text-coffee-900">
+                    Café Aroma
+                </span>
+
+            </a>
+
+
+            <div class="hidden md:flex items-center gap-8">
+
+                <a href="../../index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="signup.html">
+                    Sign Up
+                </a>
+
+                <a href="signin.html"
+                   class="bg-coffee-900 text-white px-5 py-2.5 rounded-lg">
+                    Sign In
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- LOGIN -->
+
+<section class="min-h-[calc(100vh-80px)] py-16 flex items-center">
+
+    <div class="max-w-5xl mx-auto px-6 w-full">
+
+        <div class="grid lg:grid-cols-2 bg-white rounded-3xl shadow-xl overflow-hidden">
+
+
+            <!-- LEFT -->
+
+            <div class="coffee-gradient text-white p-10 lg:p-14">
+
+                <div class="text-6xl mb-6">
+                    ☕
+                </div>
+
+                <h1 class="font-display text-5xl font-bold mb-5">
+                    Welcome Back
+                </h1>
+
+                <p class="text-stone-200 leading-7">
+                    Sign in to your Café Aroma account and
+                    continue your coffee journey.
+                </p>
+
+
+                <div class="mt-10 bg-white/10 p-6 rounded-2xl">
+
+                    <div class="text-amber-400 text-xl mb-2">
+                        ★★★★★
+                    </div>
+
+                    <p class="italic text-stone-200">
+                        "Good coffee is always a good idea."
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <div class="p-8 lg:p-14">
+
+                <h2 class="font-display text-3xl font-bold text-coffee-900">
+                    Sign In
+                </h2>
+
+                <p class="text-stone-500 mt-2 mb-8">
+                    Enter your account details.
+                </p>
+
+
+                <form id="loginForm"
+                      onsubmit="return loginUser()">
+
+
+                    <div class="mb-5">
+
+                        <label for="loginEmail"
+                               class="block mb-2 font-medium">
+                            Email Address
+                        </label>
+
+                        <input
+                            id="loginEmail"
+                            type="email"
+                            required
+                            placeholder="you@example.com"
+                            class="w-full border border-stone-300 rounded-lg p-3">
+
+                    </div>
+
+
+                    <div class="mb-5">
+
+                        <label for="loginPassword"
+                               class="block mb-2 font-medium">
+                            Password
+                        </label>
+
+                        <input
+                            id="loginPassword"
+                            type="password"
+                            minlength="8"
+                            required
+                            placeholder="Your password"
+                            class="w-full border border-stone-300 rounded-lg p-3">
+
+                    </div>
+
+
+                    <div class="flex items-center justify-between mb-6">
+
+                        <label class="flex items-center gap-2 text-sm">
+
+                            <input
+                                type="checkbox">
+
+                            Remember me
+
+                        </label>
+
+
+                        <a href="#"
+                           onclick="alert('Password reset link feature can be connected to your backend.')"
+                           class="text-coffee-700 text-sm font-semibold">
+
+                            Forgot password?
+
+                        </a>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="w-full bg-coffee-900 hover:bg-coffee-800 text-white py-3 rounded-lg font-semibold">
+
+                        Sign In
+
+                    </button>
+
+
+                    <div class="relative my-7">
+
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-stone-200"></div>
+                        </div>
+
+                        <div class="relative text-center">
+                            <span class="bg-white px-4 text-sm text-stone-500">
+                                OR
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="w-full border border-stone-300 py-3 rounded-lg font-semibold">
+
+                        Continue as Guest
+
+                    </button>
+
+
+                    <p class="text-center mt-6 text-stone-600">
+
+                        Don't have an account?
+
+                        <a href="signup.html"
+                           class="text-coffee-700 font-bold">
+                            Sign up.
+                        </a>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function loginUser() {
+
+    const email =
+        document.getElementById("loginEmail").value;
+
+    const password =
+        document.getElementById("loginPassword").value;
+
+    if (!email || password.length < 8) {
+
+        alert("Please enter a valid email and password.");
+
+        return false;
+    }
+
+    alert("Sign in successful!");
+
+    return false;
+}
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+</body>
+</html>

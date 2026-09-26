@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Café Aroma</title>
+    <link rel="icon"
+          type="image/png"
+          href="https://icons.iconarchive.com/icons/iconoir-team/iconoir/128/coffee-cup-icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body class="bg-stone-50 text-stone-800">
+
+<!-- NAVBAR -->
+
+<nav class="bg-white border-b fixed w-full z-50 top-0">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="flex items-center justify-between h-20">
+
+            <a href="../../index.html"
+               class="flex items-center gap-3">
+
+                <div class="w-11 h-11 rounded-full bg-coffee-900 text-white flex items-center justify-center">
+                    ☕
+                </div>
+
+                <span class="font-display text-2xl font-bold text-coffee-900">
+                    Café Aroma
+                </span>
+
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+
+                <a href="../../index.html">Home</a>
+
+                <a href="about.html">About</a>
+
+                <a href="contact.html"
+                   class="text-coffee-700 font-semibold">
+                    Contact
+                </a>
+
+                <a href="signup.html">Sign Up</a>
+
+                <a href="signin.html"
+                   class="bg-coffee-900 text-white px-5 py-2.5 rounded-lg">
+                    Sign In
+                </a>
+
+            </div>
+
+            <button data-collapse-toggle="contact-mobile"
+                    class="md:hidden text-2xl">
+                ☰
+            </button>
+
+        </div>
+
+        <div id="contact-mobile"
+             class="hidden md:hidden pb-5 space-y-4">
+
+            <a class="block" href="../../index.html">Home</a>
+            <a class="block" href="about.html">About</a>
+            <a class="block" href="contact.html">Contact</a>
+            <a class="block" href="signup.html">Sign Up</a>
+            <a class="block" href="signin.html">Sign In</a>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- HEADER -->
+
+<section class="page-header mt-20 py-24 text-white text-center">
+
+    <h1 class="font-display text-5xl font-bold">
+        Contact Us
+    </h1>
+
+    <p class="mt-4 text-stone-200">
+        We would love to hear from you.
+    </p>
+
+</section>
+
+
+<!-- CONTACT CARDS -->
+
+<section class="py-16">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white rounded-2xl p-7 shadow-sm text-center">
+
+                <div class="text-4xl mb-4">
+                    📍
+                </div>
+
+                <h3 class="font-bold text-xl">
+                    Our Location
+                </h3>
+
+                <p class="text-stone-500 mt-2">
+                    Lahore, Punjab, Pakistan
+                </p>
+
+            </div>
+
+
+            <div class="bg-white rounded-2xl p-7 shadow-sm text-center">
+
+                <div class="text-4xl mb-4">
+                    📞
+                </div>
+
+                <h3 class="font-bold text-xl">
+                    Phone
+                </h3>
+
+                <p class="text-stone-500 mt-2">
+                    +92 300 1234567
+                </p>
+
+            </div>
+
+
+            <div class="bg-white rounded-2xl p-7 shadow-sm text-center">
+
+                <div class="text-4xl mb-4">
+                    ✉
+                </div>
+
+                <h3 class="font-bold text-xl">
+                    Email
+                </h3>
+
+                <p class="text-stone-500 mt-2">
+                    hello@cafearoma.com
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT FORM -->
+
+<section class="pb-20">
+
+    <div class="max-w-6xl mx-auto px-6" >
+
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+
+            <div class="grid lg:grid-cols-2">
+
+                <!-- INFO -->
+
+                <div class="coffee-gradient text-white p-10" style="color: black;">
+
+                    <span class="text-amber-400 font-semibold">
+                        GET IN TOUCH
+                    </span>
+
+                    <h2 class="font-display text-4xl font-bold mt-3 mb-5">
+                        Let's Talk Coffee
+                    </h2>
+
+                    <p class="text-stone-200 leading-7">
+                        Have a question, suggestion or want to book a table?
+                        Send us a message and our team will get back to you.
+                    </p>
+
+                    <div class="mt-10 space-y-6">
+
+                        <div>
+                            <div class="font-bold">Opening Hours</div>
+                            <div class="text-stone-300">
+                                Monday - Sunday: 8 AM - 11 PM
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="font-bold">Response Time</div>
+                            <div class="text-stone-300">
+                                Usually within 24 hours
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <div class="p-10">
+
+                    <form
+                        action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+                        method="POST"
+                        id="contactForm">
+
+                        <div class="mb-5">
+
+                            <label for="name"
+                                   class="block mb-2 font-medium">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                                minlength="3"
+                                required
+                                class="w-full border border-stone-300 rounded-lg p-3">
+
+                        </div>
+
+
+                        <div class="mb-5">
+
+                            <label for="email"
+                                   class="block mb-2 font-medium">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="you@example.com"
+                                required
+                                class="w-full border border-stone-300 rounded-lg p-3">
+
+                        </div>
+
+
+                        <div class="mb-5">
+
+                            <label for="phone"
+                                   class="block mb-2 font-medium">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+92 300 1234567"
+                                pattern="[0-9+\-\s]{10,}"
+                                required
+                                class="w-full border border-stone-300 rounded-lg p-3">
+
+                        </div>
+
+
+                        <div class="mb-5">
+
+                            <label for="subject"
+                                   class="block mb-2 font-medium">
+                                Subject
+                            </label>
+
+                            <select
+                                id="subject"
+                                name="subject"
+                                required
+                                class="w-full border border-stone-300 rounded-lg p-3">
+
+                                <option value="">
+                                    Select subject
+                                </option>
+
+                                <option>
+                                    Table Booking
+                                </option>
+
+                                <option>
+                                    General Question
+                                </option>
+
+                                <option>
+                                    Feedback
+                                </option>
+
+                                <option>
+                                    Catering
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="mb-6">
+
+                            <label for="message"
+                                   class="block mb-2 font-medium">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                minlength="10"
+                                required
+                                placeholder="Write your message..."
+                                class="w-full border border-stone-300 rounded-lg p-3"></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="w-full bg-coffee-900 hover:bg-coffee-800 text-white py-3 rounded-lg font-semibold">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MAP / LOCATION -->
+
+<section class="pb-20">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="bg-stone-200 rounded-2xl h-72 flex items-center justify-center">
+
+            <div class="text-center">
+
+                <div class="text-5xl mb-3">
+                    📍
+                </div>
+
+                <h3 class="font-bold text-xl">
+                    Café Aroma
+                </h3>
+
+                <p class="text-stone-600">
+                    Lahore, Pakistan
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="py-20 bg-stone-100">
+
+    <div class="max-w-4xl mx-auto px-6">
+
+        <h2 class="font-display text-4xl font-bold text-center text-coffee-900 mb-10">
+            Contact FAQ
+        </h2>
+
+        <div id="contactFaq"
+             data-accordion="collapse">
+
+            <h2>
+                <button type="button"
+                        class="flex justify-between w-full p-5 bg-white border"
+                        data-accordion-target="#contact1">
+
+                    <span>
+                        Can I book a table online?
+                    </span>
+
+                    <span>+</span>
+
+                </button>
+            </h2>
+
+            <div id="contact1" class="hidden">
+
+                <div class="p-5 bg-white border border-t-0 text-stone-600">
+                    Yes. Select "Table Booking" in the contact form and
+                    send us your preferred date and time.
+                </div>
+
+            </div>
+
+
+            <h2>
+                <button type="button"
+                        class="flex justify-between w-full p-5 bg-white border"
+                        data-accordion-target="#contact2">
+
+                    <span>
+                        Do you provide catering?
+                    </span>
+
+                    <span>+</span>
+
+                </button>
+            </h2>
+
+            <div id="contact2" class="hidden">
+
+                <div class="p-5 bg-white border border-t-0 text-stone-600">
+                    Yes, we provide catering services for events.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="bg-stone-950 text-white">
+
+    <div class="max-w-7xl mx-auto px-6 py-12">
+
+        <div class="grid md:grid-cols-4 gap-8">
+
+            <div>
+                <h3 class="font-display text-2xl font-bold">
+                    ☕ Café Aroma
+                </h3>
+
+                <p class="text-stone-400 mt-3">
+                    Fresh coffee and cozy moments.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold mb-4">
+                    Pages
+                </h3>
+
+                <a href="../../index.html"
+                   class="block text-stone-400 mb-2">
+                    Home
+                </a>
+
+                <a href="about.html"
+                   class="block text-stone-400 mb-2">
+                    About
+                </a>
+
+                <a href="contact.html"
+                   class="block text-stone-400">
+                    Contact
+                </a>
+
+            </div>
+
+            <div>
+                <h3 class="font-bold mb-4">
+                    Account
+                </h3>
+
+                <a href="signup.html"
+                   class="block text-stone-400 mb-2">
+                    Sign Up
+                </a>
+
+                <a href="signin.html"
+                   class="block text-stone-400">
+                    Sign In
+                </a>
+
+            </div>
+
+            <div>
+                <h3 class="font-bold mb-4">
+                    Contact
+                </h3>
+
+                <p class="text-stone-400">
+                    Lahore, Pakistan
+                </p>
+
+                <p class="text-stone-400 mt-2">
+                    +92 300 1234567
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="border-t border-stone-800 mt-10 pt-6 text-center text-stone-500">
+            © 2026 Café Aroma. All Rights Reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+</body>
+</html>

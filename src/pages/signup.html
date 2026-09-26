@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+          <title>Café Aroma</title>
+<link rel="icon"
+      type="image/png"
+      href="https://icons.iconarchive.com/icons/iconoir-team/iconoir/128/coffee-cup-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="../../assets/css/style.css">
+
+</head>
+
+
+<body class="bg-stone-50">
+
+
+<!-- NAVBAR -->
+
+<nav class="bg-white border-b">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="flex items-center justify-between h-20">
+
+            <a href="../../index.html"
+               class="flex items-center gap-3">
+
+                <div class="w-11 h-11 bg-coffee-900 rounded-full text-white flex items-center justify-center">
+                    ☕
+                </div>
+
+                <span class="font-display text-2xl font-bold text-coffee-900">
+                    Café Aroma
+                </span>
+
+            </a>
+
+
+            <div class="hidden md:flex gap-8 items-center">
+
+                <a href="../../index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="signup.html"
+                   class="text-coffee-700 font-semibold">
+                    Sign Up
+                </a>
+
+                <a href="signin.html"
+                   class="bg-coffee-900 text-white px-5 py-2.5 rounded-lg">
+                    Sign In
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- SIGNUP -->
+
+<section class="min-h-[calc(100vh-80px)] py-16">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <div class="grid lg:grid-cols-2 bg-white rounded-3xl shadow-xl overflow-hidden">
+
+
+            <!-- LEFT -->
+
+            <div class="coffee-gradient text-white p-10 lg:p-14">
+
+                <div class="text-5xl mb-6">
+                    ☕
+                </div>
+
+                <h1 class="font-display text-4xl font-bold mb-5">
+                    Join Café Aroma
+                </h1>
+
+                <p class="text-stone-200 leading-7">
+                    Create your free account and become part
+                    of our coffee-loving community.
+                </p>
+
+
+                <div class="mt-10 space-y-6">
+
+                    <div class="flex gap-4">
+
+                        <div class="text-2xl">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold">
+                                Exclusive Offers
+                            </h3>
+
+                            <p class="text-stone-300">
+                                Get special discounts and promotions.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex gap-4">
+
+                        <div class="text-2xl">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold">
+                                Faster Booking
+                            </h3>
+
+                            <p class="text-stone-300">
+                                Book your favorite table easily.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex gap-4">
+
+                        <div class="text-2xl">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold">
+                                Coffee Rewards
+                            </h3>
+
+                            <p class="text-stone-300">
+                                Earn rewards every time you visit.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <div class="p-8 lg:p-14">
+
+                <h2 class="font-display text-3xl font-bold text-coffee-900">
+                    Create Account
+                </h2>
+
+                <p class="text-stone-500 mt-2 mb-8">
+                    Fill in your information below.
+                </p>
+
+
+                <form id="signupForm"
+                      onsubmit="return validateSignup()">
+
+
+                    <div class="grid md:grid-cols-2 gap-5">
+
+
+                        <div>
+
+                            <label class="block mb-2 font-medium"
+                                   for="firstName">
+                                First Name
+                            </label>
+
+                            <input
+                                id="firstName"
+                                type="text"
+                                required
+                                minlength="2"
+                                placeholder="First name"
+                                class="w-full border border-stone-300 rounded-lg p-3">
+
+                        </div>
+
+
+                        <div>
+
+                            <label class="block mb-2 font-medium"
+                                   for="lastName">
+                                Last Name
+                            </label>
+
+                            <input
+                                id="lastName"
+                                type="text"
+                                required
+                                minlength="2"
+                                placeholder="Last name"
+                                class="w-full border border-stone-300 rounded-lg p-3">
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="mt-5">
+
+                        <label class="block mb-2 font-medium"
+                               for="signupEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            id="signupEmail"
+                            type="email"
+                            required
+                            placeholder="you@example.com"
+                            class="w-full border border-stone-300 rounded-lg p-3">
+
+                    </div>
+
+
+                    <div class="mt-5">
+
+                        <label class="block mb-2 font-medium"
+                               for="signupPhone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            id="signupPhone"
+                            type="tel"
+                            required
+                            pattern="[0-9+\-\s]{10,}"
+                            placeholder="+92 300 1234567"
+                            class="w-full border border-stone-300 rounded-lg p-3">
+
+                    </div>
+
+
+                    <div class="mt-5">
+
+                        <label class="block mb-2 font-medium"
+                               for="password">
+                            Password
+                        </label>
+
+                        <input
+                            id="password"
+                            type="password"
+                            required
+                            minlength="8"
+                            placeholder="Minimum 8 characters"
+                            class="w-full border border-stone-300 rounded-lg p-3">
+
+                    </div>
+
+
+                    <div class="mt-5">
+
+                        <label class="block mb-2 font-medium"
+                               for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            id="confirmPassword"
+                            type="password"
+                            required
+                            minlength="8"
+                            placeholder="Repeat password"
+                            class="w-full border border-stone-300 rounded-lg p-3">
+
+                    </div>
+
+
+                    <div class="flex items-start gap-3 mt-5">
+
+                        <input
+                            id="terms"
+                            type="checkbox"
+                            required
+                            class="mt-1">
+
+                        <label for="terms"
+                               class="text-sm text-stone-600">
+                            I agree to the Terms & Conditions and Privacy Policy.
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="w-full mt-7 bg-coffee-900 hover:bg-coffee-800 text-white py-3 rounded-lg font-semibold">
+
+                        Create Account
+
+                    </button>
+
+
+                    <p class="text-center mt-6 text-stone-600">
+
+                        Already have an account?
+
+                        <a href="signin.html"
+                           class="text-coffee-700 font-bold">
+                            Sign in.
+                        </a>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+function validateSignup() {
+
+    const password =
+        document.getElementById("password").value;
+
+    const confirmPassword =
+        document.getElementById("confirmPassword").value;
+
+    if (password !== confirmPassword) {
+
+        alert("Passwords do not match.");
+
+        return false;
+    }
+
+    alert("Account created successfully!");
+
+    return false;
+}
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+</body>
+</html>

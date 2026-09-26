@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Café Aroma</title>
+    <link rel="icon"
+          type="image/png"
+          href="https://icons.iconarchive.com/icons/iconoir-team/iconoir/128/coffee-cup-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            50: '#faf6f2',
+                            100: '#f4e9df',
+                            200: '#e7d0bb',
+                            300: '#d5ae8d',
+                            400: '#bd845d',
+                            500: '#a8633d',
+                            600: '#8e4d2d',
+                            700: '#713b25',
+                            800: '#5b3021',
+                            900: '#3b1f14'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-stone-50 text-stone-800">
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="bg-white border-b border-stone-200 fixed w-full z-50 top-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full bg-coffee-900 text-white flex items-center justify-center text-xl">
+                    ☕
+                </div>
+                <span class="font-display text-2xl font-bold text-coffee-900">
+                    Café Aroma
+                </span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-coffee-700 font-semibold">Home</a>
+                <a href="src/pages/about.html" class="hover:text-coffee-700">About</a>
+                <a href="src/pages/contact.html" class="hover:text-coffee-700">Contact</a>
+                <a href="src/pages/signup.html" class="hover:text-coffee-700">Sign Up</a>
+
+                <a href="src/pages/signin.html"
+                   class="bg-coffee-900 text-white px-5 py-2.5 rounded-lg hover:bg-coffee-800">
+                    Sign In
+                </a>
+            </div>
+
+            <button data-collapse-toggle="mobile-menu"
+                    class="md:hidden text-stone-700 text-2xl">
+                ☰
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden pb-5">
+            <div class="flex flex-col gap-4">
+                <a href="index.html">Home</a>
+                <a href="src/pages/about.html">About</a>
+                <a href="src/pages/contact.html">Contact</a>
+                <a href="src/pages/signup.html">Sign Up</a>
+                <a href="src/pages/signin.html">Sign In</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="relative h-[650px] flex items-center mt-20">
+
+    <img
+        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=80"
+        class="absolute inset-0 w-full h-full object-cover"
+        alt="Coffee shop">
+
+    <div class="absolute inset-0 hero-overlay"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 w-full">
+        <div class="max-w-2xl text-white">
+
+            <span class="inline-block bg-amber-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-5">
+                ☕ Freshly Brewed Every Day
+            </span>
+
+            <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-6">
+                Fresh Coffee.
+                <span class="text-amber-400">Cozy Moments.</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-stone-200 mb-8">
+                Welcome to Café Aroma — your neighborhood destination
+                for handcrafted coffee, delicious food and unforgettable moments.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+                <a href="#menu"
+                   class="bg-amber-500 hover:bg-amber-600 text-white px-7 py-3 rounded-lg font-semibold">
+                    Explore Menu
+                </a>
+
+                <a href="src/pages/contact.html"
+                   class="border border-white hover:bg-white hover:text-coffee-900 px-7 py-3 rounded-lg font-semibold">
+                    Book a Table
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= ANNOUNCEMENT ================= -->
+
+<div class="bg-coffee-900 text-white py-4">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-3">
+        <p>🎉 Special Offer: Get 20% OFF on your first order!</p>
+        <a href="src/pages/signup.html"
+           class="bg-amber-500 px-5 py-2 rounded-lg font-semibold">
+            Join Now
+        </a>
+    </div>
+</div>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-12">
+            <span class="text-coffee-600 font-semibold">OUR SERVICES</span>
+            <h2 class="font-display text-4xl font-bold text-coffee-900 mt-2">
+                Everything You Need
+            </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="service-card bg-stone-50 p-7 rounded-2xl text-center">
+                <div class="text-4xl mb-4">☕</div>
+                <h3 class="font-bold text-xl mb-2">Fresh Coffee</h3>
+                <p class="text-stone-600">Premium beans brewed by expert baristas.</p>
+            </div>
+
+            <div class="service-card bg-stone-50 p-7 rounded-2xl text-center">
+                <div class="text-4xl mb-4">🍰</div>
+                <h3 class="font-bold text-xl mb-2">Fresh Bakery</h3>
+                <p class="text-stone-600">Delicious cakes, pastries and desserts.</p>
+            </div>
+
+            <div class="service-card bg-stone-50 p-7 rounded-2xl text-center">
+                <div class="text-4xl mb-4">📶</div>
+                <h3 class="font-bold text-xl mb-2">Free Wi-Fi</h3>
+                <p class="text-stone-600">Work, study or relax with high-speed Wi-Fi.</p>
+            </div>
+
+            <div class="service-card bg-stone-50 p-7 rounded-2xl text-center">
+                <div class="text-4xl mb-4">🚚</div>
+                <h3 class="font-bold text-xl mb-2">Fast Delivery</h3>
+                <p class="text-stone-600">Your favorite coffee delivered to your door.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= MENU ================= -->
+
+<section id="menu" class="py-20 bg-stone-100">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-12">
+            <span class="text-coffee-600 font-semibold">OUR MENU</span>
+            <h2 class="font-display text-4xl font-bold text-coffee-900 mt-2">
+                Popular Favorites
+            </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="menu-card bg-white rounded-2xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80"
+                     class="w-full h-52 object-cover" alt="Cappuccino">
+                <div class="p-5">
+                    <div class="flex justify-between">
+                        <h3 class="font-bold text-lg">Cappuccino</h3>
+                        <span class="font-bold text-coffee-700">Rs. 450</span>
+                    </div>
+                    <p class="text-stone-500 mt-2">Rich espresso with creamy foam.</p>
+                </div>
+            </div>
+
+            <div class="menu-card bg-white rounded-2xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80"
+                     class="w-full h-52 object-cover" alt="Latte">
+                <div class="p-5">
+                    <div class="flex justify-between">
+                        <h3 class="font-bold text-lg">Caramel Latte</h3>
+                        <span class="font-bold text-coffee-700">Rs. 520</span>
+                    </div>
+                    <p class="text-stone-500 mt-2">Smooth latte with caramel flavor.</p>
+                </div>
+            </div>
+
+            <div class="menu-card bg-white rounded-2xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80"
+                     class="w-full h-52 object-cover" alt="Cake">
+                <div class="p-5">
+                    <div class="flex justify-between">
+                        <h3 class="font-bold text-lg">Chocolate Cake</h3>
+                        <span class="font-bold text-coffee-700">Rs. 650</span>
+                    </div>
+                    <p class="text-stone-500 mt-2">Moist chocolate cake with cream.</p>
+                </div>
+            </div>
+
+            <div class="menu-card bg-white rounded-2xl overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=80"
+                     class="w-full h-52 object-cover" alt="Croissant">
+                <div class="p-5">
+                    <div class="flex justify-between">
+                        <h3 class="font-bold text-lg">Butter Croissant</h3>
+                        <span class="font-bold text-coffee-700">Rs. 300</span>
+                    </div>
+                    <p class="text-stone-500 mt-2">Freshly baked golden croissant.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= ABOUT PREVIEW ================= -->
+
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+
+        <img
+            src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=80"
+            class="rounded-3xl shadow-xl"
+            alt="Cafe interior">
+
+        <div>
+            <span class="text-coffee-600 font-semibold">ABOUT CAFÉ AROMA</span>
+
+            <h2 class="font-display text-4xl font-bold text-coffee-900 mt-3 mb-5">
+                More Than Just Coffee
+            </h2>
+
+            <p class="text-stone-600 leading-7 mb-5">
+                Café Aroma was created with one simple idea:
+                bring people together over great coffee and delicious food.
+            </p>
+
+            <div class="space-y-4 mb-7">
+
+                <div class="flex gap-4">
+                    <div class="text-2xl">✓</div>
+                    <div>
+                        <h3 class="font-bold">Premium Ingredients</h3>
+                        <p class="text-stone-500">Only carefully selected ingredients.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="text-2xl">✓</div>
+                    <div>
+                        <h3 class="font-bold">Friendly Atmosphere</h3>
+                        <p class="text-stone-500">A cozy place for friends and family.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="src/pages/about.html"
+               class="inline-block bg-coffee-900 text-white px-6 py-3 rounded-lg">
+                Learn More
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= STATISTICS ================= -->
+
+<section class="coffee-gradient py-16 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+
+            <div>
+                <div class="text-4xl font-bold">12+</div>
+                <p class="text-stone-200 mt-2">Years Experience</p>
+            </div>
+
+            <div>
+                <div class="text-4xl font-bold">50K+</div>
+                <p class="text-stone-200 mt-2">Happy Customers</p>
+            </div>
+
+            <div>
+                <div class="text-4xl font-bold">30+</div>
+                <p class="text-stone-200 mt-2">Coffee Varieties</p>
+            </div>
+
+            <div>
+                <div class="text-4xl font-bold">4.9</div>
+                <p class="text-stone-200 mt-2">Customer Rating</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="py-20 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-12">
+            <span class="text-coffee-600 font-semibold">TESTIMONIALS</span>
+            <h2 class="font-display text-4xl font-bold text-coffee-900 mt-2">
+                What Our Customers Say
+            </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <div class="bg-white p-7 rounded-2xl shadow-sm">
+                <div class="text-amber-500 mb-4">★★★★★</div>
+                <p class="text-stone-600 mb-5">
+                    "Amazing coffee and a beautiful atmosphere. Perfect place
+                    for weekend brunch."
+                </p>
+                <div class="font-bold">Ayesha Khan</div>
+                <div class="text-sm text-stone-500">Regular Customer</div>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl shadow-sm">
+                <div class="text-amber-500 mb-4">★★★★★</div>
+                <p class="text-stone-600 mb-5">
+                    "The caramel latte is absolutely delicious. The staff
+                    is also very friendly."
+                </p>
+                <div class="font-bold">Hamza Ali</div>
+                <div class="text-sm text-stone-500">Coffee Lover</div>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl shadow-sm">
+                <div class="text-amber-500 mb-4">★★★★★</div>
+                <p class="text-stone-600 mb-5">
+                    "I love working from Café Aroma. Great Wi-Fi,
+                    excellent coffee and peaceful environment."
+                </p>
+                <div class="font-bold">Sara Ahmed</div>
+                <div class="text-sm text-stone-500">Freelancer</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-10">
+            <span class="text-coffee-600 font-semibold">OUR SPACE</span>
+            <h2 class="font-display text-4xl font-bold text-coffee-900 mt-2">
+                Visit Our Café
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+            <img class="gallery-img rounded-xl h-60 w-full object-cover"
+                 src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80"
+                 alt="Cafe">
+
+            <img class="gallery-img rounded-xl h-60 w-full object-cover"
+                 src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=700&q=80"
+                 alt="Cafe">
+
+            <img class="gallery-img rounded-xl h-60 w-full object-cover"
+                 src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80"
+                 alt="Cafe">
+
+            <img class="gallery-img rounded-xl h-60 w-full object-cover"
+                 src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=700&q=80"
+                 alt="Coffee">
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section class="py-20 bg-stone-100">
+    <div class="max-w-4xl mx-auto px-6">
+
+        <div class="text-center mb-10">
+            <h2 class="font-display text-4xl font-bold text-coffee-900">
+                Frequently Asked Questions
+            </h2>
+        </div>
+
+        <div id="accordion-home" data-accordion="collapse">
+
+            <h2 id="accordion-home-heading-1">
+                <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium border border-stone-200 bg-white"
+                        data-accordion-target="#accordion-home-body-1">
+                    <span>Do you offer Wi-Fi?</span>
+                    <span>+</span>
+                </button>
+            </h2>
+
+            <div id="accordion-home-body-1" class="hidden">
+                <div class="p-5 border border-t-0 bg-white text-stone-600">
+                    Yes, we provide free high-speed Wi-Fi for all customers.
+                </div>
+            </div>
+
+            <h2 id="accordion-home-heading-2">
+                <button type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium border border-stone-200 bg-white"
+                        data-accordion-target="#accordion-home-body-2">
+                    <span>Do you provide delivery?</span>
+                    <span>+</span>
+                </button>
+            </h2>
+
+            <div id="accordion-home-body-2" class="hidden">
+                <div class="p-5 border border-t-0 bg-white text-stone-600">
+                    Yes, Café Aroma provides local delivery.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="py-20 coffee-gradient text-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+
+        <h2 class="font-display text-4xl font-bold mb-4">
+            Join Our Coffee Club
+        </h2>
+
+        <p class="text-stone-200 mb-7">
+            Get exclusive offers, new menu updates and café news.
+        </p>
+
+        <form class="flex flex-col sm:flex-row gap-3">
+            <input type="email"
+                   placeholder="Enter your email"
+                   class="flex-1 px-5 py-3 rounded-lg text-stone-800"
+                   required>
+
+            <button class="bg-amber-500 px-7 py-3 rounded-lg font-semibold">
+                Subscribe
+            </button>
+        </form>
+
+    </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-stone-950 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-14">
+
+        <div class="grid md:grid-cols-4 gap-10">
+
+            <div>
+                <div class="flex items-center gap-3 mb-5">
+                    <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center">
+                        ☕
+                    </div>
+                    <span class="font-display text-xl font-bold">
+                        Café Aroma
+                    </span>
+                </div>
+
+                <p class="text-stone-400">
+                    Fresh coffee, delicious food and cozy moments.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold mb-4">Quick Links</h3>
+                <div class="space-y-3 text-stone-400">
+                    <a class="block hover:text-white" href="index.html">Home</a>
+                    <a class="block hover:text-white" href="src/pages/about.html">About</a>
+                    <a class="block hover:text-white" href="src/pages/contact.html">Contact</a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-bold mb-4">Account</h3>
+                <div class="space-y-3 text-stone-400">
+                    <a class="block hover:text-white" href="src/pages/signup.html">Sign Up</a>
+                    <a class="block hover:text-white" href="src/pages/signin.html">Sign In</a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-bold mb-4">Contact</h3>
+                <div class="space-y-3 text-stone-400">
+                    <p>📍 Lahore, Pakistan</p>
+                    <p>📞 +92 300 1234567</p>
+                    <p>✉ hello@cafearoma.com</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-stone-800 mt-10 pt-6 text-center text-stone-500">
+            © 2026 Café Aroma. All Rights Reserved.
+        </div>
+
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+</body>
+</html>
